@@ -16,38 +16,43 @@ function computerPlay(){
 }
 
 let jugadaPc = computerPlay();
-let jugadaH = prompt(
-    "Introduzca su jugada: ");
 
+function ronda(computerSelection) {
 
-function ronda(playerSelection, computerSelection) {
+    let jugadaH = prompt("Introduzca su jugada: ");
+    playerSelection = jugadaH
     
     if (playerSelection === 'paper' && computerSelection === 'rock')
-        console.log('you win');
+        return 'you win';
     else if (playerSelection === 'rock' && computerSelection === 'scissors')
     {
-        console.log('you win');
+        return 'you win';
     }
     else if (playerSelection === 'scissors' && computerSelection === 'paper')
     {
-        console.log('you win');
+        return 'you win';
     }
     else if (playerSelection === 'rock' && computerSelection === 'paper')
     {
-        console.log('you lose');
+        return 'you lose';
     }
     else if (playerSelection === 'paper' && computerSelection === 'scissors')
     {
-        console.log('you lose');
+        return 'you lose';
     }
     else if (playerSelection === 'scissors' && computerSelection === 'rock'){
-        console.log('you lose');
+        return 'you lose';
     }
     else if (playerSelection === computerSelection)
     {
-        console.log('tie')
+        return 'tie';
     }
 }
 
 
-console.log(ronda(jugadaH, computerPlay()))
+function game() {
+    for (let i = 0; i < 5; i++) {
+        console.log(ronda(computerPlay()))
+    }
+}
+game()
