@@ -16,43 +16,62 @@ function computerPlay(){
 }
 
 let jugadaPc = computerPlay();
+let counter = 0;
+let counterPc = 0;
 
 function ronda(computerSelection) {
 
     let jugadaH = prompt("Introduzca su jugada: ");
-    playerSelection = jugadaH
+    playerSelection = jugadaH;
     
-    if (playerSelection === 'paper' && computerSelection === 'rock')
-        return 'you win';
+    if (playerSelection === 'paper' && computerSelection === 'rock'){
+        counter++;
+        return 'You win';
+    }
     else if (playerSelection === 'rock' && computerSelection === 'scissors')
-    {
-        return 'you win';
+    {   counter++;
+        return 'You win';
     }
     else if (playerSelection === 'scissors' && computerSelection === 'paper')
-    {
-        return 'you win';
+    {   counter++;
+        return 'You win';
     }
     else if (playerSelection === 'rock' && computerSelection === 'paper')
-    {
-        return 'you lose';
+    {   counterPc++;
+        return 'You lose';
     }
     else if (playerSelection === 'paper' && computerSelection === 'scissors')
-    {
-        return 'you lose';
+    {   counterPc++;
+        return 'You lose';
     }
     else if (playerSelection === 'scissors' && computerSelection === 'rock'){
-        return 'you lose';
+        counterPc++;
+        return 'You lose';
     }
     else if (playerSelection === computerSelection)
     {
-        return 'tie';
+        return 'Tie'; 
     }
 }
 
 
 function game() {
     for (let i = 0; i < 5; i++) {
-        console.log(ronda(computerPlay()))
+        console.log(ronda(computerPlay()));
     }
 }
+
 game()
+console.log('Your score was ' + counter)
+console.log('The computer score was ' +counterPc)
+
+if (counter === counterPc) {
+    console.log("It's a tie.")
+}
+
+else if (counter > counterPc) {
+    console.log('You have won the game!')
+}
+else if (counterPc > counter) {
+    console.log('The computer wins the game!')
+}
