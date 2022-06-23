@@ -26,31 +26,31 @@ function ronda(computerSelection) {
     
     if (playerSelection === 'paper' && computerSelection === 'rock'){
         counter++;
-        return 'You win';
+        return 'You win.';
     }
     else if (playerSelection === 'rock' && computerSelection === 'scissors')
     {   counter++;
-        return 'You win';
+        return 'You win.';
     }
     else if (playerSelection === 'scissors' && computerSelection === 'paper')
     {   counter++;
-        return 'You win';
+        return 'You win.';
     }
     else if (playerSelection === 'rock' && computerSelection === 'paper')
     {   counterPc++;
-        return 'You lose';
+        return 'You lose.';
     }
     else if (playerSelection === 'paper' && computerSelection === 'scissors')
     {   counterPc++;
-        return 'You lose';
+        return 'You lose.';
     }
     else if (playerSelection === 'scissors' && computerSelection === 'rock'){
         counterPc++;
-        return 'You lose';
+        return 'You lose.';
     }
     else if (playerSelection === computerSelection)
     {
-        return 'Tie'; 
+        return 'Tie.'; 
     }
 }
 
@@ -62,8 +62,8 @@ function game() {
 }
 
 game()
-console.log('Your score was ' + counter)
-console.log('The computer score was ' +counterPc)
+console.log('Your score was ' + counter + '.')
+console.log('The computer score was ' + counterPc + '.')
 
 if (counter === counterPc) {
     console.log("It's a tie.")
