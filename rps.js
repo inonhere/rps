@@ -97,7 +97,7 @@ papel.addEventListener('click', () =>{
         contenido.textContent = 'Vas ganando!'
         container.appendChild(contenido);}
     else if (counter < counterPc){
-        contenido.textContent = 'Vas perdiendo manco asqueroso!'
+        contenido.textContent = 'Vas perdiendo!'
         container.appendChild(contenido)
     }
     else if (counter === counterPc){
@@ -116,7 +116,7 @@ tijera.addEventListener('click', () =>{
         contenido.textContent = 'Vas ganando!'
         container.appendChild(contenido);}
     else if (counter < counterPc){
-        contenido.textContent = 'Vas perdiendo manco asqueroso!'
+        contenido.textContent = 'Vas perdiendo!'
         container.appendChild(contenido)
     }
     else if (counter === counterPc){
